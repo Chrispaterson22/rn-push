@@ -27,11 +27,10 @@ export default function App() {
 				}
 			})
 			.then(() => {
-				console.log('Getting Token')
 				return Notifications.getExpoPushTokenAsync()
 			})
-			.then(data => {
-				console.log(data)
+			.then(response => {
+				const token = response.data
 			})
 			.catch(err => {
 				return null
